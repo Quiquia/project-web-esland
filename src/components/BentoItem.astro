@@ -1,0 +1,16 @@
+---
+interface Props {
+  class?: string;
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<article
+  class={`${Astro.props.class} relative rounded-xl backdrop-blur-md border border-black/10 shadown-inner shadown-white/10 `}
+>
+  <h2>{title}</h2>
+  {subtitle && <h3>{subtitle}</h3>}
+</article>
