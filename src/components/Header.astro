@@ -1,0 +1,27 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<header id="header-nav" class="fixed w-screen py-4 top-0 px-8 z-10">
+  <div class="grid grid-cols-3 max-w-7xl mx-auto items-center justify-between">
+    <a href="/" class="col-span-1">
+      <Logo class="w-12 h-auto" />
+    </a>
+    <nav class="col-span-1 justify-self-center">
+      <ul class="flex gap-4">
+        <li>
+          <a href="#" class="hover:underline">INFO</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">ARCHIVO </a>
+        </li>
+      </ul>
+    </nav>
+    <a
+      href="#"
+      class="border border-white py-2 px-4 rounded-full text-center max-w-max justify-self-end"
+    >
+      ENTRADA EN LA ISLA ESLAND
+    </a>
+  </div>
+</header>
