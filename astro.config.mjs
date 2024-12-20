@@ -24,6 +24,6 @@ export default defineConfig({
       include: ["@fontsource-variable/onest"],
     },
   },
-
+  output: "server",
   adapter: vercel(),
 });
