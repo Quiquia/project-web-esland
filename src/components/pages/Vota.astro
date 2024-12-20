@@ -1,0 +1,37 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import HeroContainer from "../HeroContainer.astro";
+
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const session = 0;
+
+const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp";
+---
+
+<Layout
+  title=`${i18n.SEO.VOTE_TITLE} ${new Date().getFullYear()}`
+  description=`${i18n.SEO.VOTE_DESCRIPTION}`
+>
+  <HeroContainer img="/VOTE-background.webp">
+    <section
+      class="bg-no-repeat bg-cover relative pb-24 min-h-screen w-full max-w-[100vw]"
+    >
+      <img src={`/${bkg}`} alt="ESLAND cover" />
+    </section>
+    <h1
+      class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest"
+    >
+      {i18n.VOTE.TITLE}
+    </h1>
+    <button
+      class="border border-white py-2 px-4 rounded-full text-center max-w-max justify-self-end"
+    >
+      revisa tu VOTo
+    </button>
+  </HeroContainer>
+  <main></main>
+</Layout>
